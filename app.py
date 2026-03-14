@@ -13,6 +13,7 @@ def static_files(filename):
     return send_from_directory('static', filename)
 
 # ── Health check ──────────────────────────────────────────────────────────────
+#_____________checkhealth_____finalchange______________________________________
 @app.route('/api/health')
 def health():
     return jsonify({'status': 'ok'})

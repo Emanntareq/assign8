@@ -37,7 +37,7 @@ jobs:
       # Run the smoke test: verify if the app is working
       - name: Run smoke test
         run: |
-          docker run -d -p 5000:5000 --env-file .env --name quiz-ai devops-quiz-ai
+          docker run -d -p 5001:5000 --env-file .env --name quiz-ai devops-quiz-ai
           sleep 5 # Wait for the container to fully start
           curl --fail http://localhost:5000/api/health || exit 1
 
